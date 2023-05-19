@@ -86,7 +86,7 @@ const Title = styled.h1`
   @media (max-width: 700px) {
     font-size: 1.4rem;
     width: 80%;
-    height: auto;
+    height: 100px;
   }
 `;
 

@@ -97,11 +97,19 @@ const Title = styled.h1`
 
 const LoadingTitle = styled(Title)`
   padding-top: 200px;
+
+  @media (max-width: 700px) {
+    font-size: 1.8rem;
+  }
 `;
 
 const SubTitle = styled.div`
   font-size: 24px;
   text-align: center;
+
+  @media (max-width: 700px) {
+    font-size: 1.4rem;
+  }
 `;
 
 const SpinnerWrapper = styled.div`
