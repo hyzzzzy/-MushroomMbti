@@ -24,15 +24,19 @@ function Main(props) {
   );
 }
 const MainContainer = styled.div`
-  width: 700px;
-  height: 600px;
+  width: 800px;
+  height: 750px;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 100px auto;
+  border: 4px solid #FFCDB6;
+  border-radius: 30px;
+  background-color: #ffffff;
 `;
 
 const Title = styled.h1`
+  padding-top: 20px;
   font-size: 50px;
 `;
 
@@ -46,7 +50,7 @@ const Button = styled.button`
   border: none;
   border-radius: 100px;
   font-size: 30px;
-  margin-top: 300px;
+  margin-top: 400px;
   cursor: pointer;
   background-color: #F48A72;
 

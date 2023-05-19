@@ -63,21 +63,27 @@ function Testpage(props) {
 }
 
 const MainContainer = styled.div`
-  width: 700px;
-  height: 600px;
+  width: 800px;
+  height: 750px;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 100px auto;
+  border: 4px solid #FFCDB6;
+  border-radius: 30px;
+  background-color: #ffffff;
 `;
 
 const Title = styled.h1`
   font-size: 30px;
   text-align: center;
-  height: 200px;
+  width: 610px;
+  height: 180px;
+  word-break: keep-all;
 `;
 
 const SubTitle = styled.div`
+  padding-top: 30px;
   font-size: 24px;
 `;
 
@@ -91,7 +97,7 @@ const CountContainer = styled.div`
 const ProgressBar = styled.div`
   width: 400px;
   height: 10px;
-  background-color: #FFCDB6;
+  border: 1px solid #d8483d;
   border-radius: 100px; 
 
   position: relative;
@@ -113,11 +119,12 @@ const Button = styled.button`
   background-color: #FFFFFF;
   border: 2px solid #F48A72;
   border-radius: 10px;
-  margin-top: 40px;
+  margin-top: 30px;
   padding: 10px;
   font-size: 24px;
   cursor: pointer;
   transition: all 0.2s;
+  word-break: keep-all;
     
   &:hover {
     background-color: #FFCDB6;
