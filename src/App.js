@@ -1,24 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
+import Main from "./components/main";
+import Testpage from "./components/testpage";
+import Resultpage from "./components/resultpage";
 
 function App() {
+  const [EI, setEI] = useState(0);
+  const [SN, setSN] = useState(0);
+  const [TF, setTF] = useState(0);
+  const [JP, setJP] = useState(0);
+  let [datas, setDatas] = useState();
+  let [MBTI, setMBTI] = useState();
+
+  useEffect(() => {
+    let data = [];
+
+    EI > 0 ? data.push("E") : data.push("I");
+    SN > 0 ? data.push("S") : data.push("N");
+    TF > 0 ? data.push("T") : data.push("F");
+    JP > 0 ? data.push("J") : data.push("P");
+    
+    setDatas(data.join(""));
+    setMBTI(datas);
+  }, [EI, SN, TF, JP, datas]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Main setEI={setEI} setSN={setSN} setTF={setTF} setJP={setJP} />
+          }
+        ></Route>
+        <Route
+          path="/test"
+          element={
+            <Testpage
+              EI={EI}
+              SN={SN}
+              TF={TF}
+              JP={JP}
+              setEI={setEI}
+              setSN={setSN}
+              setTF={setTF}
+              setJP={setJP}
+            />
+          }
+        ></Route>
+        <Route path="/result" element={<Resultpage MBTI={MBTI} />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
