@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Main from "./components/main";
 import Testpage from "./components/testpage";
 import Resultpage from "./components/resultpage";
+import Totalpage from "./components/totalPage";
 
 function App() {
   const [EI, setEI] = useState(0);
@@ -49,6 +50,7 @@ function App() {
           }
         ></Route>
         <Route path="/result" element={<Resultpage MBTI={MBTI} />}></Route>
+        <Route path="/total" element={<Totalpage />}></Route>
       </Routes>
     </BrowserRouter>
   );

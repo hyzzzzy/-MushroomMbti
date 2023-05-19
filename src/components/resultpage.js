@@ -6,7 +6,7 @@ import SyncLoader from "react-spinners/SyncLoader";
 
 function Resultpage(props) {
   const [isLoading, setIsLoading] = useState(true);
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -53,32 +53,46 @@ function Resultpage(props) {
           ))}
         </Ul>
       </div>
-      <Button
-        onClick={() => {
-          navigate("/");
-        }}
-      >
-        돌아가기
-      </Button>
+      <ButtonContainer>
+        <Button
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          돌아가기
+        </Button>
+        <TotalButton
+          onClick={() => {
+            navigate("/total");
+          }}
+        >
+          다른 버섯들 보러가기
+        </TotalButton>
+      </ButtonContainer>
     </MainContainer>
   );
 }
 
 const MainContainer = styled.div`
   width: 800px;
-  height: 750px;
+  min-height: 750px;
+  height: max-height;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 100px auto;
-  border: 4px solid #FFCDB6;
-  border-radius: 30px;
-  background-color: #ffffff;
+  margin: 80px auto;
+
+  @media (max-width: 700px) {
+    width: 90%;
+    height: auto;
+    margin: 40px auto;
+  }
 `;
 
 const Title = styled.h1`
   padding-top: 20px;
-  font-size: 40px;
+  font-size: 2.5rem;
+  text-align: center;
 `;
 
 const LoadingTitle = styled(Title)`
@@ -91,8 +105,8 @@ const SubTitle = styled.div`
 `;
 
 const SpinnerWrapper = styled.div`
-  position: fixed;
-  top: 60%;
+  position: absolute;
+  top: 500px;
   left: 50%;
   transform: translate(-50%, -50%);
 `;
@@ -103,25 +117,47 @@ const Ul = styled.ul`
   
 const Li = styled.li`
   font-size: 22px;
-  word-break: keep-all;
+  width: 600px;
+
+  @media (max-width: 700px) {
+    width: 90%;
+    height: auto;
+    margin: 40px auto;
+  }
 `;
 
-const Content = styled.p`
-  white-space: pre-line;
+const ButtonContainer = styled.div`
+  display: flex;
+
+  @media (max-width: 700px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    height: auto;
+    margin: 40px auto;
+  }
 `;
 
 const Button = styled.button`
-  width: 150px;
+  width: 300px;
   height: 80px;
   border: none;
   border-radius: 100px;
   font-size: 26px;
   cursor: pointer;
   background-color: #F48A72;
-  margin-top: 30px;
+  margin: 30px 0;
   transition: all 0.2s;
   &:hover {
     background-color: #FFCDB6;
+  }
+`;
+
+const TotalButton = styled(Button)`
+  margin-left: 20px;
+
+  @media (max-width: 700px) {
+    margin-left: 0;
   }
 `;
 

@@ -3,11 +3,11 @@ import { useNavigate } from "react-router-dom";
 import styled from 'styled-components';
 
 function Main(props) {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <MainContainer>
       <Title>당신은 어떤 버섯일까요?</Title>
-      <SubTitle>버섯 MBTI 테스트</SubTitle>
+      <SubTitle>&#x1F344;버섯 MBTI 테스트&#x1F344;</SubTitle>
       <div></div>
       <Button
         onClick={() => {
@@ -18,35 +18,39 @@ function Main(props) {
           props.setJP(0);
         }}
       >
-        테스트 시작하기
+        시작하기
       </Button>
     </MainContainer>
   );
 }
 const MainContainer = styled.div`
-  width: 800px;
-  height: 750px;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 100px auto;
-  border: 4px solid #FFCDB6;
-  border-radius: 30px;
-  background-color: #ffffff;
+  margin: 80px auto;
+
+  @media (max-width: 700px) {
+    width: 90%;
+    height: auto;
+    margin: 40px auto;
+  }
 `;
 
 const Title = styled.h1`
   padding-top: 20px;
-  font-size: 50px;
+  font-size: 2.5rem;
+  text-align: center;
 `;
 
 const SubTitle = styled.div`
-  font-size: 24px;
+  font-size: 1.6rem;
 `;
 
 const Button = styled.button`
-  width: 400px;
-  height: 100px;
+  width: 16rem;
+  height: 5rem;
   border: none;
   border-radius: 100px;
   font-size: 30px;

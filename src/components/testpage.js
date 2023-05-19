@@ -9,7 +9,7 @@ function Testpage(props) {
   const [num, setNum] = useState(1);
   const [data] = useState(TEST);
 
-  const progressBarWidth = `${(num / 12) * 400}px`;
+  const progressBarWidth = `${(num / 12) * 20}rem`;
 
   return (
     <MainContainer>
@@ -68,18 +68,26 @@ const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 100px auto;
-  border: 4px solid #FFCDB6;
-  border-radius: 30px;
-  background-color: #ffffff;
+  margin: 80px auto;
+
+  @media (max-width: 700px) {
+    width: 90%;
+    height: auto;
+    margin: 40px auto;
+  }
 `;
 
 const Title = styled.h1`
-  font-size: 30px;
+  font-size: 2rem;
   text-align: center;
   width: 610px;
   height: 180px;
-  word-break: keep-all;
+
+  @media (max-width: 700px) {
+    font-size: 1.4rem;
+    width: 80%;
+    height: auto;
+  }
 `;
 
 const SubTitle = styled.div`
@@ -95,7 +103,7 @@ const CountContainer = styled.div`
 `;
 
 const ProgressBar = styled.div`
-  width: 400px;
+  width: 20rem;
   height: 10px;
   border: 1px solid #d8483d;
   border-radius: 100px; 
@@ -124,10 +132,14 @@ const Button = styled.button`
   font-size: 24px;
   cursor: pointer;
   transition: all 0.2s;
-  word-break: keep-all;
     
   &:hover {
     background-color: #FFCDB6;
+  }
+
+  @media (max-width: 700px) {
+    width: 20rem;
+    font-size: 1.4rem;
   }
 `;
 
