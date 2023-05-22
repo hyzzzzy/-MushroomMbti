@@ -63,15 +63,6 @@ const SubTitle = styled.div`
   text-align: center;
 `;
 
-
-const Ul = styled.ul`
-  margin-top: 300px;
-`;
-  
-const Li = styled.li`
-  font-size: 22px;
-`;
-
 const Button = styled.button`
   width: 300px;
   height: 80px;
