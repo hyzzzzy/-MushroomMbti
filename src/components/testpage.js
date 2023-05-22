@@ -86,7 +86,7 @@ const Title = styled.h1`
   @media (max-width: 700px) {
     font-size: 1.4rem;
     width: 80%;
-    height: 100px;
+    height: 160px;
   }
 `;
 
@@ -139,7 +139,7 @@ const Button = styled.button`
 
   @media (max-width: 700px) {
     width: 20rem;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 `;
 
