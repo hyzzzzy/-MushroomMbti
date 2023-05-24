@@ -13,6 +13,7 @@ function Totalpage() {
           <MBTIWrapper key={key}>
             <SubTitle>{MBTI[key].title}</SubTitle>
             <SubTitle>{key}</SubTitle>
+            <Image src={MBTI[key].img} alt={key}></Image>
           </MBTIWrapper>
         ))}
       </MBTIContainer>
@@ -32,6 +33,7 @@ const MainContainer = styled.div`
   height: max-height;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   margin: 80px auto;
 
@@ -51,6 +53,9 @@ const MBTIContainer = styled.div`
 const MBTIWrapper = styled.div`
   width: 300px;
   height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Title = styled.h1`
@@ -61,6 +66,10 @@ const Title = styled.h1`
 const SubTitle = styled.div`
   font-size: 24px;
   text-align: center;
+`;
+
+const Image = styled.img`
+  width: 200px;
 `;
 
 const Button = styled.button`

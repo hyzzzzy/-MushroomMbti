@@ -47,6 +47,7 @@ function Resultpage(props) {
       <Title>{MBTI[props.MBTI].title}</Title>
       <SubTitle>{props.MBTI}</SubTitle>
       <SubTitle>{MBTI[props.MBTI].subtitle}</SubTitle>
+      <Image src='/images/sample.png' alt={props.MBTI}></Image>
       <div>
         <Ul>
           {contents.map((content, index) => (
@@ -121,8 +122,14 @@ const SpinnerWrapper = styled.div`
   transform: translate(-50%, -50%);
 `;
 
+const Image = styled.img`
+  width: 400px;
+  height: 400px;
+  margin-top: 10px;
+`;
+
 const Ul = styled.ul`
-  margin-top: 300px;
+  margin-top: 10px;
 `;
   
 const Li = styled.li`

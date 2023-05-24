@@ -8,7 +8,7 @@ function Main(props) {
     <MainContainer>
       <Title>당신은 어떤 버섯일까요?</Title>
       <SubTitle>&#x1F344;버섯 MBTI 테스트&#x1F344;</SubTitle>
-      <div></div>
+      <Image src='/images/sample.png' alt='버섯 MBTI 테스트'></Image>
       <Button
         onClick={() => {
           navigate("/test");
@@ -48,13 +48,19 @@ const SubTitle = styled.div`
   font-size: 1.6rem;
 `;
 
+const Image = styled.img`
+  width: 400px;
+  height: 400px;
+  margin-top: 10px;
+`;
+
 const Button = styled.button`
   width: 16rem;
   height: 5rem;
   border: none;
   border-radius: 100px;
   font-size: 30px;
-  margin-top: 400px;
+  margin-top: 10px;
   cursor: pointer;
   background-color: #F48A72;
 

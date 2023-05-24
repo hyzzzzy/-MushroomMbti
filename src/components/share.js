@@ -8,11 +8,11 @@ import {
 } from "react-share";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import styled from 'styled-components';
-import { ReactComponent as Url } from '../asset/Url.svg';
+import { ReactComponent as Url } from '../assets/Url.svg';
 
 function Share() {
   const currentUrl = document.location.href;
-  const description = '내 버섯 MBTI는?\n';
+  const description = '내 버섯🍄 MBTI는?\n';
   return (
     <ShareWrapper>
       <CopyToClipboard text={currentUrl}>
