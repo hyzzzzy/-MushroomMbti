@@ -16,7 +16,7 @@ function Share() {
   return (
     <ShareWrapper>
       <CopyToClipboard text={currentUrl}>
-					<URLShareButton>
+					<URLShareButton title="링크 복사">
             <Url/>
           </URLShareButton>
 			</CopyToClipboard>
