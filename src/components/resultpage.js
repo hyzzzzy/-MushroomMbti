@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import MBTI from './common/mbti';
 import styled from 'styled-components';
 import SyncLoader from "react-spinners/SyncLoader";
+import Share from './share';
 
 function Resultpage(props) {
   const [isLoading, setIsLoading] = useState(true);
@@ -53,6 +54,7 @@ function Resultpage(props) {
           ))}
         </Ul>
       </div>
+      <Share></Share>
       <ButtonContainer>
         <Button
           onClick={() => {
