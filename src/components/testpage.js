@@ -133,7 +133,8 @@ const Button = styled.button`
   cursor: pointer;
   transition: all 0.2s;
     
-  &:hover {
+  &:hover,
+  &:active {
     background-color: #FFCDB6;
   }
 
