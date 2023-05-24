@@ -46,9 +46,9 @@ const URLShareButton = styled.button`
 
 const ShareWrapper = styled.div`
   display: flex;
-  transition: all 0.2s;
   & > * {
     margin-right: 10px;
+    transition: all 0.2s;
   }
   & > *:hover {
     opacity: 0.7;
