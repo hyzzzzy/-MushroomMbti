@@ -54,7 +54,6 @@ function Resultpage(props) {
           ))}
         </Ul>
       </div>
-      <Share></Share>
       <ButtonContainer>
         <Button
           onClick={() => {
@@ -71,6 +70,7 @@ function Resultpage(props) {
           다른 버섯들 보러가기
         </TotalButton>
       </ButtonContainer>
+      <Share></Share>
     </MainContainer>
   );
 }
