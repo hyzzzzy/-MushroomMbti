@@ -55,7 +55,7 @@ function Share({ imgUrl }) {
   return (
     <ShareWrapper>
       <CopyToClipboard text={currentUrl}>
-					<URLShareButton title="링크 복사">
+					<URLShareButton title="링크 복사" onClick={() => alert('링크가 복사되었습니다')}>
             <Url/>
           </URLShareButton>
 			</CopyToClipboard>
@@ -79,7 +79,6 @@ const URLShareButton = styled.button`
 	border-radius: 24px;
 	border: 0px;
 	background-color: grey;
-  padding-top: 4px;
 `;
 
 const ShareWrapper = styled.div`

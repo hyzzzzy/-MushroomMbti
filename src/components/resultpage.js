@@ -151,7 +151,7 @@ const ButtonContainer = styled.div`
     justify-content: center;
     width: 90%;
     height: auto;
-    margin: 40px auto;
+    margin: 20px auto;
   }
 `;
 
