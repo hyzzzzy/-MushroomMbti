@@ -59,7 +59,7 @@ function Share({ imgUrl }) {
             <Url/>
           </URLShareButton>
 			</CopyToClipboard>
-      <FacebookShareButton url={currentUrl}>
+      <FacebookShareButton url={process.env.REACT_APP_PUBLIC_URL}>
         <FacebookIcon size={48} round={true} borderRadius={24}></FacebookIcon>
       </FacebookShareButton>
       <TwitterShareButton url={currentUrl} title={description}>
