@@ -4,8 +4,6 @@ import {
   FacebookIcon,
   TwitterShareButton,
   TwitterIcon,
-  LineShareButton,
-  LineIcon,
 } from "react-share";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import styled from 'styled-components';
