@@ -79,6 +79,9 @@ const URLShareButton = styled.button`
 	border-radius: 24px;
 	border: 0px;
 	background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const ShareWrapper = styled.div`
