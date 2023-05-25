@@ -11,9 +11,9 @@ import { ReactComponent as Url } from '../assets/Url.svg';
 import { useScript } from "./hook";
 import kakaoLogo from "../assets/Kakao.png";
 
-function Share({ imgUrl }) {
-  const currentUrl = document.location.href;
-  const description = '내 버섯🍄 MBTI는?\n';
+function Share({ mbti, myMurshroom, imgUrl }) {
+  const home = process.env.REACT_APP_PUBLIC_URL;
+  const description = `당신은 ${myMurshroom}(${mbti}) 입니다.\n버섯🍄 MBTI 테스트를 진행하고 공유해보세요!`;
 
   // kakao SDK import하기
 	const status = useScript(process.env.REACT_APP_KAKAO_SDK_URL);
@@ -23,8 +23,8 @@ function Share({ imgUrl }) {
       window.Kakao.Link.sendDefault({
           objectType: 'feed',
           content: {
-            title: '재미로 보는 버섯 MBTI 테스트',
-            description: description,
+            title: `나는 ${myMurshroom}(${mbti}) 입니다.`,
+            description: '재미로 보는 버섯 MBTI 테스트',
             imageUrl: process.env.REACT_APP_PUBLIC_URL + imgUrl,
             link: {
               mobileWebUrl: `${process.env.REACT_APP_KAKAO_SDK_URL}`,
@@ -33,7 +33,7 @@ function Share({ imgUrl }) {
           },
           buttons: [
             {
-              title: '나의 버섯 MBTI 테스트 하러 가기',
+              title: '나도 하러 가기',
               link: {
                 mobileWebUrl: `${process.env.REACT_APP_KAKAO_SDK_URL}`,
                 webUrl: `${process.env.REACT_APP_KAKAO_SDK_URL}`,
@@ -54,15 +54,15 @@ function Share({ imgUrl }) {
 
   return (
     <ShareWrapper>
-      <CopyToClipboard text={currentUrl}>
+      <CopyToClipboard text={home}>
 					<URLShareButton title="링크 복사" onClick={() => alert('링크가 복사되었습니다')}>
             <Url/>
           </URLShareButton>
 			</CopyToClipboard>
-      <FacebookShareButton url={process.env.REACT_APP_PUBLIC_URL}>
+      <FacebookShareButton url={home}>
         <FacebookIcon size={48} round={true} borderRadius={24}></FacebookIcon>
       </FacebookShareButton>
-      <TwitterShareButton url={currentUrl} title={description}>
+      <TwitterShareButton url={home} title={description}>
         <TwitterIcon size={48} round={true} borderRadius={24}></TwitterIcon>
       </TwitterShareButton>
       <KakaoShareButton onClick={handleKakaoButton}>

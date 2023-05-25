@@ -71,7 +71,7 @@ function Resultpage(props) {
           다른 버섯들 보러가기
         </TotalButton>
       </ButtonContainer>
-      <Share imgUrl={MBTI[props.MBTI].img}></Share>
+      <Share mbti={props.MBTI} myMurshroom={MBTI[props.MBTI].title} imgUrl={MBTI[props.MBTI].img}></Share>
     </MainContainer>
   );
 }
