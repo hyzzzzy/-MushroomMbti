@@ -4,6 +4,7 @@ import MBTI from './common/mbti';
 import styled from 'styled-components';
 import SyncLoader from "react-spinners/SyncLoader";
 import Share from './share';
+import { AdfitBannerAd } from './adFitBanner';
 
 function Resultpage(props) {
   const [isLoading, setIsLoading] = useState(true);
@@ -63,15 +64,16 @@ function Resultpage(props) {
         >
           돌아가기
         </Button>
-        <TotalButton
+        <Button
           onClick={() => {
             navigate("/total");
           }}
         >
-          다른 버섯들 보러가기
-        </TotalButton>
+          전체 버섯 보기
+        </Button>
       </ButtonContainer>
       <Share mbti={props.MBTI} myMurshroom={MBTI[props.MBTI].title} imgUrl={MBTI[props.MBTI].img}></Share>
+      <AdfitBannerAd></AdfitBannerAd>
     </MainContainer>
   );
 }
@@ -96,6 +98,10 @@ const Title = styled.h1`
   padding-top: 20px;
   font-size: 2.5rem;
   text-align: center;
+
+  @media (max-width: 700px) {
+    font-size: 1.8rem;
+  }
 `;
 
 const LoadingTitle = styled(Title)`
@@ -111,7 +117,7 @@ const SubTitle = styled.div`
   text-align: center;
 
   @media (max-width: 700px) {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 `;
 
@@ -126,6 +132,12 @@ const Image = styled.img`
   width: 400px;
   height: 400px;
   margin-top: 10px;
+
+  @media (max-width: 700px) {
+    width: 90%;
+    max-width: 300px;
+    height: auto;
+  }
 `;
 
 const Ul = styled.ul`
@@ -139,7 +151,8 @@ const Li = styled.li`
   @media (max-width: 700px) {
     width: 90%;
     height: auto;
-    margin: 40px auto;
+    margin: 20px auto;
+    font-size: 1.2rem;
   }
 `;
 
@@ -151,7 +164,6 @@ const ButtonContainer = styled.div`
     justify-content: center;
     width: 90%;
     height: auto;
-    margin: 20px auto;
   }
 `;
 
@@ -163,18 +175,18 @@ const Button = styled.button`
   font-size: 26px;
   cursor: pointer;
   background-color: #F48A72;
-  margin: 30px 0;
+  margin: 30px 20px;
   transition: all 0.2s;
   &:hover {
     background-color: #FFCDB6;
   }
-`;
-
-const TotalButton = styled(Button)`
-  margin-left: 20px;
 
   @media (max-width: 700px) {
-    margin-left: 0;
+    width: 12rem;
+    height: 4rem;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    padding: 0 5px;
   }
 `;
 

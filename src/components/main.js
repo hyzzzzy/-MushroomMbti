@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 import styled from 'styled-components';
+import { AdfitBannerAd } from './adFitBanner';
 
 function Main(props) {
   const navigate = useNavigate();
@@ -20,9 +21,12 @@ function Main(props) {
       >
         시작하기
       </Button>
+      <Description>개발: 신혜지, 그림: 송해인</Description>
+      <AdfitBannerAd></AdfitBannerAd>
     </MainContainer>
   );
 }
+
 const MainContainer = styled.div`
   width: 100%;
   height: 100%;
@@ -42,16 +46,29 @@ const Title = styled.h1`
   padding-top: 20px;
   font-size: 2.5rem;
   text-align: center;
+
+  @media (max-width: 700px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const SubTitle = styled.div`
   font-size: 1.6rem;
+  @media (max-width: 700px) {
+    font-size: 1rem;
+  }
 `;
 
 const Image = styled.img`
   width: 400px;
   height: 400px;
   margin-top: 10px;
+
+  @media (max-width: 700px) {
+    width: 90%;
+    max-width: 300px;
+    height: auto;
+  }
 `;
 
 const Button = styled.button`
@@ -68,6 +85,18 @@ const Button = styled.button`
   &:hover {
     background-color: #f5b3a4;
   }
+
+  @media (max-width: 700px) {
+    width: 10rem;
+    height: 4rem;
+    font-size: 1.3rem;
+  }
+`;
+
+const Description = styled.div`
+  margin-top: 10px;
+  font-size: 0.7rem;
+  color: #868e96;
 `;
 
 export default Main;

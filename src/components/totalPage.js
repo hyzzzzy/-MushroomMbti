@@ -51,8 +51,8 @@ const MBTIContainer = styled.div`
 `;
 
 const MBTIWrapper = styled.div`
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -61,15 +61,29 @@ const MBTIWrapper = styled.div`
 const Title = styled.h1`
   padding-top: 20px;
   font-size: 40px;
+
+  @media (max-width: 700px) {
+    font-size: 1.5rem;
+    min-width: max-content;
+  }
 `;
 
 const SubTitle = styled.div`
   font-size: 24px;
   text-align: center;
+  @media (max-width: 700px) {
+    font-size: 1rem;
+  }
 `;
 
 const Image = styled.img`
   width: 200px;
+
+  @media (max-width: 700px) {
+    width: 90%;
+    max-width: 200px;
+    height: auto;
+  }
 `;
 
 const Button = styled.button`
@@ -84,6 +98,12 @@ const Button = styled.button`
   transition: all 0.2s;
   &:hover {
     background-color: #FFCDB6;
+  }
+
+  @media (max-width: 700px) {
+    width: 10rem;
+    height: 4rem;
+    font-size: 1.3rem;
   }
 `;
 

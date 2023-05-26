@@ -6,9 +6,9 @@
 }
 
 @font-face {
-  font-family: 'Dovemayo_gothic';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
-  font-weight: normal;
+  font-family: 'LINESeedKR-Bd';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -19,7 +19,7 @@
 }
 
 button, li {
-  font-family: 'Dovemayo_gothic';
+  font-family: 'LINESeedKR-Bd';
 }
 
 body {
@@ -29,6 +29,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f1f3f5;
 }
 
 code {

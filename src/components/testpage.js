@@ -86,7 +86,8 @@ const Title = styled.h1`
   @media (max-width: 700px) {
     font-size: 1.4rem;
     width: 80%;
-    height: 160px;
+    min-width: 300px;
+    height: 100px;
   }
 `;
 
@@ -133,7 +134,6 @@ const Button = styled.button`
   cursor: pointer;
   transition: all 0.2s;
     
-  &:hover,
   &:active {
     background-color: #FFCDB6;
   }
