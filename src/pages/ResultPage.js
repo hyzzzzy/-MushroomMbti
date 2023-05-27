@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import SyncLoader from "react-spinners/SyncLoader";
-import Share from '/components/Share';
-import MBTI from '/components/data/MBTI';
-import { AdfitBannerAd } from '/components/AdFitBanner';
+import Share from '../components/Share.js';
+import MBTI from '../components/data/MBTI.js';
+import { AdfitBannerAd } from '../components/AdFitBanner.js';
 import styled from 'styled-components';
-import * as Layout from './Layout';
+import * as Layout from './Layout.js';
 
 function Resultpage(props) {
   const [isLoading, setIsLoading] = useState(true);

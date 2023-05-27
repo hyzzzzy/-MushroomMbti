@@ -1,9 +1,9 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import TEST from '/components/data/TEST';
+import TEST from '../components/data/TEST.js';
 import styled from 'styled-components';
-import * as Layout from './Layout';
+import * as Layout from './Layout.js';
 
 function Testpage(props) {
   const navigate = useNavigate();
