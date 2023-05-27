@@ -1,17 +1,17 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
-import Main from "./components/main";
-import Testpage from "./components/testpage";
-import Resultpage from "./components/resultpage";
-import Totalpage from "./components/totalPage";
+import MainPage from "./pages/MainPage";
+import Testpage from "./pages/TestPage";
+import Resultpage from "./pages/ResultPage";
+import Totalpage from "./pages/TotalPage";
 
 function App() {
   const [EI, setEI] = useState(0);
   const [SN, setSN] = useState(0);
   const [TF, setTF] = useState(0);
   const [JP, setJP] = useState(0);
-  let [datas, setDatas] = useState();
-  let [MBTI, setMBTI] = useState();
+  const [datas, setDatas] = useState();
+  const [MBTI, setMBTI] = useState();
 
   useEffect(() => {
     let data = [];
@@ -31,7 +31,7 @@ function App() {
         <Route
           path="/"
           element={
-            <Main setEI={setEI} setSN={setSN} setTF={setTF} setJP={setJP} />
+            <MainPage setEI={setEI} setSN={setSN} setTF={setTF} setJP={setJP} />
           }
         ></Route>
         <Route

@@ -8,7 +8,7 @@ import {
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import styled from 'styled-components';
 import { ReactComponent as Url } from '../assets/Url.svg';
-import { useScript } from "./hook";
+import { useScript } from "./Hook";
 import kakaoLogo from "../assets/Kakao.png";
 
 function Share({ mbti, myMurshroom, imgUrl }) {
@@ -72,6 +72,19 @@ function Share({ mbti, myMurshroom, imgUrl }) {
   )
 }
 
+const ShareWrapper = styled.div`
+  display: flex;
+  margin-top: 30px;
+  & > * {
+    margin-right: 10px;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  & > *:hover {
+    opacity: 0.7;
+  }
+`;
+
 const URLShareButton = styled.button`
 	width: 48px;
 	height: 48px;
@@ -82,18 +95,6 @@ const URLShareButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
-
-const ShareWrapper = styled.div`
-  display: flex;
-  & > * {
-    margin-right: 10px;
-    transition: all 0.2s;
-    cursor: pointer;
-  }
-  & > *:hover {
-    opacity: 0.7;
-  }
 `;
 
 const KakaoShareButton = styled.div`
