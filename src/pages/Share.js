@@ -8,7 +8,7 @@ import {
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import styled from 'styled-components';
 import { ReactComponent as Url } from '../assets/Url.svg';
-import { useScript } from "../components/Hook.js";
+import { useScript } from "./Hook.js";
 import kakaoLogo from "../assets/Kakao.png";
 
 function Share({ mbti, myMurshroom, imgUrl }) {
