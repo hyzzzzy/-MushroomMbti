@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
-import MBTI from '../components/data/MBTI';
-import { AdfitBannerAd } from '../components/AdFitBanner';
+import MBTI from '/components/data/MBTI';
+import { AdfitBannerAd } from '/components/AdFitBanner';
 import styled from 'styled-components';
 import * as Layout from './Layout';
 
