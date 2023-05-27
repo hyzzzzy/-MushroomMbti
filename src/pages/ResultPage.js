@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import SyncLoader from "react-spinners/SyncLoader";
 import Share from './Share.js';
 import MBTI from '../components/data/MBTI.js';
-import { AdfitBannerAd } from './AdFitBanner.js';
+import { AdfitBannerAd } from '../components/AdFitBanner.js';
 import styled from 'styled-components';
 import * as Layout from './Layout.js';
 
