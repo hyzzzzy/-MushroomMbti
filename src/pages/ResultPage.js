@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import SyncLoader from "react-spinners/SyncLoader";
-import Share from './Share.js';
+import Share from '../components/Share.js';
 import MBTI from '../components/data/MBTI.js';
 import { AdfitBannerAd } from '../components/AdFitBanner.js';
 import styled from 'styled-components';
