@@ -88,7 +88,9 @@ const CountingBar = styled.div`
 `;
 
 const Question = styled(Layout.SubTitle)`
-  height: 100px;
+  min-height: 100px;
+  margin-bottom: 40px;
+
   font-size: 1.4rem;
 `;
 
