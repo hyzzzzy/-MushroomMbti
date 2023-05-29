@@ -49,7 +49,7 @@ function Resultpage(props) {
       <Layout.Title>{MBTI[props.MBTI].title}</Layout.Title>
       <Layout.SubTitle>{props.MBTI}</Layout.SubTitle>
       <Layout.SubTitle>{MBTI[props.MBTI].subtitle}</Layout.SubTitle>
-      <Layout.Image src='/images/sample.png' alt={props.MBTI}></Layout.Image>
+      <Layout.Image src={MBTI[props.MBTI].img} alt={props.MBTI}></Layout.Image>
       <div>
         <Ul>
           {contents.map((content, index) => (

@@ -23,7 +23,7 @@ function Share({ mbti, myMurshroom, imgUrl }) {
       window.Kakao.Link.sendDefault({
           objectType: 'feed',
           content: {
-            title: `나는 ${myMurshroom}(${mbti}) 입니다.`,
+            title: `당신은 ${myMurshroom}(${mbti}) 입니다.`,
             description: '재미로 보는 버섯 MBTI 테스트',
             imageUrl: process.env.REACT_APP_PUBLIC_URL + imgUrl,
             link: {
@@ -55,9 +55,9 @@ function Share({ mbti, myMurshroom, imgUrl }) {
   return (
     <ShareWrapper>
       <CopyToClipboard text={home}>
-					<URLShareButton title="링크 복사" onClick={() => alert('링크가 복사되었습니다')}>
-            <Url/>
-          </URLShareButton>
+        <URLShareButton title="링크 복사" onClick={() => alert('링크가 복사되었습니다')}>
+          <Url/>
+        </URLShareButton>
 			</CopyToClipboard>
       <FacebookShareButton url={home}>
         <FacebookIcon size={48} round={true} borderRadius={24}></FacebookIcon>

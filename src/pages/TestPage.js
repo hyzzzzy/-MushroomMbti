@@ -89,6 +89,7 @@ const CountingBar = styled.div`
 
 const Question = styled(Layout.SubTitle)`
   height: 100px;
+  font-size: 1.4rem;
 `;
 
 const Button = styled.button`
